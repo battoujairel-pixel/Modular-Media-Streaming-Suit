@@ -20,13 +20,6 @@ class SoftwareRenderer
 class RendererDecorator
 class WatermarkDecorator
 class EqualizerDecorator
-
-Renderer <|.. HardwareRenderer
-Renderer <|.. SoftwareRenderer
-Renderer <|.. RendererDecorator
-RendererDecorator <|-- WatermarkDecorator
-RendererDecorator <|-- EqualizerDecorator
-
 interface PlaylistItem
 class MediaFile
 class CompositePlaylist
@@ -40,3 +33,10 @@ class MediaPlayer
 MediaPlayer --> Renderer : has
 MediaPlayer --> MediaSource : plays
 @enduml
+Renderer <|.. HardwareRenderer
+Renderer <|.. SoftwareRenderer
+Renderer <|.. RendererDecorator
+RendererDecorator <|-- WatermarkDecorator
+RendererDecorator <|-- EqualizerDecorator
+
+
